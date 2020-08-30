@@ -1,0 +1,14 @@
+dd {
+  display: inline-block;
+  margin: 0;
+  padding: 4px 0 10px 0;
+}
+
+.error-message {
+  color: red;
+  margin-left: 30px;
+}
+
+input[name='credit-card'] {
+  width: 30px;
+}

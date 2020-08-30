@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form Validation 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="vanilla.js"></script> -->
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Sign Up Form</h1>
+      <form action="#" method="post" novalidate>
+        <fieldset>
+          <dl>
+            <dt>
+              <label for="first-name">First Name</dt></label>
+            <dd>
+              <input pattern="^[a-zA-Z]+$" class="name" type="text"
+              id="first-name" name="first-name" input-name="First Name"
+              placeholder="John" required><span class="error-message"></span>
+            </dd>
+            <dt>
+              <label for="last-name">Last Name</dt></label>
+            <dd>
+              <input pattern="^[a-zA-Z]+$" class="name" type="text"
+              id="last-name" name="last-name" input-name="Last Name"
+              placeholder="Smith" required><span class="error-message"></span>
+            </dd>
+            <dt>
+              <label for="email">Email</dt></label>
+            <dd>
+              <input pattern="^[a-zA-Z0-9\.-_]+@[a-zA-Z]+\.[a-zA-Z]+$"
+              id="email" type="email" name="email" input-name="Email"
+              placeholder="user@example.com"
+              required><span class="error-message"></span>
+            </dd>
+            <dt>
+              <label for="password">Password</dt></label>
+            <dd>
+              <input pattern="\S{10,}" id="password" type="password"
+              name="password" input-name="Password"
+              required><span class="error-message"></span>
+            </dd>
+            <dt>
+              <label for="phone-number">Phone Number</dt></label>
+            <dd>
+              <input pattern="^[0-9]{3}[0-9]{3}[0-9]{4}$" valid-input="numeric"
+              id="phone-number" type="tel" name="phone-number"
+              input-name="Phone Number"
+              placeholder="1112223333"><span class="error-message"></span>
+            </dd>
+            <dt>
+              <label for="credit-card">Credit Card</dt></label>
+            <dd>
+              <input pattern="^[0-9]{4}$" id="credit-card" type="text" valid-input="numeric"
+              name="credit-card" input-name="Credit Card"
+              maxlength="4"><span> - </span>
+              <input pattern="^[0-9]{4}$" id="credit-card" type="text"
+              name="credit-card" input-name="Credit Card"
+              maxlength="4"><span> - </span>
+              <input pattern="^[0-9]{4}$" id="credit-card" type="text"
+              name="credit-card" input-name="Credit Card"
+              maxlength="4"><span> - </span>
+              <input pattern="^[0-9]{4}$" id="credit-card" type="text"
+              name="credit-card" input-name="Credit Card"
+              maxlength="4"><span class="error-message"></span>
+            </dd>
+          </dl>
+          <input id="fu" type="submit" name="submit" value="Submit">
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>

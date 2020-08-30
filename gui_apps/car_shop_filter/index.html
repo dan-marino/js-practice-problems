@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cars Filter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Buy Used Cars</h1>
+      </header>
+      <form id="filter" action="#" method="post">
+        <dl>
+          <dt>Make</dt>
+          <dd><select id="make" name="make">
+            <option value="All">All</option>
+            <option value="Honda">Honda</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Audi">Audi</option>
+          </select></dd>
+          <dt>Model</dt>
+          <dd><select id="model" name="model">
+            <option value="All">All</option>
+            <option value="Accord">Accord</option>
+            <option value="Camry">Camry</option>
+            <option value="Corolla">Corolla</option>
+            <option value="Swift">Swift</option>
+            <option value="A4">A4</option>
+          </select></dd>
+          <dt>Price</dt>
+          <dd><select id="price" name="price">
+            <option value="Any">Any</option>
+            <option value="7000">7000</option>
+            <option value="11000">11000</option>
+            <option value="12500">12500</option>
+            <option value="15000">15000</option>
+            <option value="9000">9000</option>
+            <option value="25000">25000</option>
+            <option value="26000">26000</option>
+          </select></dd>
+          <dt>Year</dt>
+          <dd><select id="year" name="make">
+            <option value="Any">Any</option>
+            <option value="2005">2005</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2016">2016</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+          </select></dd>
+        </dl>
+        <input type="submit" name="submit" value="Submit">
+      </form>
+
+      <div id="container">
+        <script id="cars-list" type="text/x-handlebars-template">
+          {{#each cars}}
+            {{> carTemplate}}
+          {{/each}}
+        </script>
+
+        <script id="car-template" type="text/x-handlebars-template">
+          <div>
+            <figure>
+              <img src="{{img}}" alt="{{year}} {{make}} {{model}}">
+            </figure>
+            <h2>{{make}} {{model}}</h2>
+            <p>Year: {{year}}</p>
+            <p>Price: {{price}}</p>
+            <a href="#">Buy</a>
+          </div>
+        </script>
+      </div>
+
+    </main>
+  </body>
+</html>

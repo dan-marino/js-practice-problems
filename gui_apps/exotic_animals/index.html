@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Australian Animals</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Australian Animals</h1>
+
+      <div id="container">
+        <script id="animal-list" type="text/x-handlebars-template">
+          {{#each animals}}
+            {{> animalTemplate}}
+          {{/each}}
+        </script>
+
+        <script id="animal-template" type="text/x-handlebars-template">
+          <figure>
+            <img src="{{img}}" alt="{{name}}">
+            <figcaption>{{bio}}</figcaption>
+          </figure>
+        </script>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 3</title>
+    <script src="./javascripts/exercise3.js"></script>
+  </head>
+  <body>
+    <form action="./api/schedules" method="post">
+      <button type="button" id="addMore">Add More Schedules</button>
+      <fieldset id="schedule-1">
+        <legend>Schedule 1</legend>
+        <dl>
+          <dt>
+            <label for="staff_id">Staff</label>
+          </dt>
+          <dd>
+            <select id="staff_dropdown" name="staff_id">
+            </select>
+          </dd>
+          <dt>
+            <label for="date">Date</label>
+          </dt>
+          <dd>
+            <input type="text" name="date" placeholder="mm-dd-yy">
+          </dd>
+          <dt>
+            <label for="time">Time</label>
+          </dt>
+          <dd>
+            <input type="text" name="time" placeholder="hh:mm">
+          </dd>
+        </dl>
+      </fieldset>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </body>
+</html>

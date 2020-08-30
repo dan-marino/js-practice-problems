@@ -1,0 +1,15 @@
+figure {
+  display: inline-flex;
+}
+
+figcaption {
+  display: none;
+  position: absolute;
+  width: 180px;
+  margin-top: 200px;
+  background: black;
+  padding: 10px;
+  opacity: .8;
+  border-radius: 8px;
+  color: white;
+}

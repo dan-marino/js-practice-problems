@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Progamming Languages</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Programming Languages</h1>
+      <div id="container">
+        <script id="language-template" type="text/x-handlebars-template">
+          <article id="{{name}}">
+            <h2>{{name}}</h2>
+            {{#if (lessThan120Chars description)}}
+              <p>{{description}}</p>
+            {{else if opened}}
+              <p>{{description}}</p>
+            {{else}}
+              <p>{{firstChars description}}</p>
+            {{/if}}
+            {{#if (lessThan120Chars description)}}
+            {{else if opened}}
+              <button type="button" id="show-less">Show Less</button>
+            {{else}}
+              <button type="button" id="show-more">Show More</button>
+            {{/if}}
+          </article>
+
+
+        </script>
+
+        <script id="language-list" type="text/x-handlebars-template">
+          {{#each languages}}
+            {{>languageTemplate}}
+          {{/each}}
+        </script>
+      </div>
+
+    </main>
+  </body>
+</html>
